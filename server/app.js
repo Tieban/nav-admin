@@ -9,9 +9,12 @@ const session = require('koa-session')
 const config = require('./../config')
 const routers = require('./routers/index')
 const mongoose = require('mongoose');
+const koaCors = require('koa2-cors');
 
 const app = new Koa()
 
+//配置cors 跨域
+app.use(koaCors())
 /**
  * mongoose连接数据库
  * @type {[type]}
@@ -42,7 +45,7 @@ app.use(bodyParser())
 
 // 配置静态资源加载中间件
 app.use(koaStatic(
-	path.join(__dirname, './../client')
+    path.join(__dirname, './../client')
 ))
 
 // 配置服务端模板渲染引擎中间件

@@ -5,28 +5,28 @@ const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
 
 const CategorySchema = new Schema({
-	userId: String,
-	isPublic: String,//1=公有，2=私有
-	name: String,
-	createAt: {
-		type: Date,
-		dafault: Date.now()
-	},
-	updateAt: {
-		type: Date,
-		dafault: Date.now()
-	}
+    userId: String,
+    isPublic: String, //1=公有，2=私有
+    name: String,
+    createAt: {
+        type: Date,
+        dafault: +Date.now()
+    },
+    updateAt: {
+        type: Date,
+        dafault: +Date.now()
+    }
 })
 
 //// save方法回调 增加添加时间字段 和 权限
-//CategorySchema.pre('update', function(next) {
-//	if(this.isNew) {
-//		this.createAt = this.updateAt = Date.now()
-//	} else {
-//		this.updateAt = Date.now()
-//	}
-//	next()
-//})
+// CategorySchema.pre('update', function(next) {
+//     if (this.isNew) {
+//         this.createAt = this.updateAt = Date.now()
+//     } else {
+//         this.updateAt = Date.now()
+//     }
+//     next()
+// })
 
 /**
  * 定义模型Category

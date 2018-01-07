@@ -25,6 +25,44 @@ npm run dev_server
 本地访问 http://localhost:2333/
 
 
+项目说明：
+项目中用到的数据实体：
+
+```
+*category*
+
+id 唯一标识
+name 名称
+isPublic 是否公有 1=公有，0=私有
+createAt 创建时间
+updateAt 更新时间
+
+
+*nav*
+id 唯一标识
+title 标题
+content 内容
+categoryId 对应的分类id
+createAt 创建时间
+updateAt 更新时间
+
+*user*
+id 唯一标识
+username 用户名
+password 密码
+createAt 创建时间
+
+```
+
+关于登陆问题，使用的是cookie 校验，cookie中有userId 证明是登陆用户，否则为未登录用户。注册和登陆之后都会写入cookie。 所有需要登陆的，router中都做限制。
+默认不用传userId
+
+注意：分类删除时， 会把此分类下面所有的 ，导航删除掉 
+
+项目中基本的后台校验都有
+
+---
+
 生产环境可以使用 pm2发布
 
 全局安装pm2
