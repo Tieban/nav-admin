@@ -1,0 +1,52 @@
+{
+  "name": "nav-admin",
+  "version": "0.1.0",
+  "description": "基于node，koa+mongodb开发简单的导航管理系统",
+  "main": "./server/app.js",
+  "scripts": {
+    "dev_server": "nodemon --harmony ./server/app",
+    "start_server": "node ./server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuess/nav-admin.git"
+  },
+  "keywords": [
+    "koa",
+    "mongodb",
+    "nav-admin"
+  ],
+  "author": "xuess<wuniu2010@126.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xuess/nav-admin/issues"
+  },
+  "homepage": "https://github.com/xuess/nav-admin#readme",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "busboy": "^0.2.14",
+    "co": "^4.6.0",
+    "debug": "^2.6.0",
+    "ejs": "^2.5.5",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-logger": "^3.0.0",
+    "koa-router": "^7.0.1",
+    "koa-send": "^3.2.0",
+    "koa-session": "^5.0.0",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.0",
+    "mongoose": "^5.0.0-rc2",
+    "validator": "^6.2.0",
+    "xss": "^0.3.3"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "babel-register": "^6.24.1",
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": ">= 7.0.0",
+    "npm": ">= 3.0.0"
+  }
+}

@@ -1,0 +1,8 @@
+.project
+node_modules/
+.idea/
+.DS_Store
+client/dist/
+client/output/upload/
+npm-debug.log
+npm-debug.log.*
