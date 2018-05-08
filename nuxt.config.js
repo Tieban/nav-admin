@@ -11,7 +11,7 @@ module.exports = {
 				name: 'viewport',
 				content: 'width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'
 			},
-			//    { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+			//{ hid: 'description', name: 'description', content: 'Nuxt.js project' }
 		],
 		script: [{
 				src: 'https://g.alicdn.com/mtb/??lib-flexible/0.3.2/flexible_css.js,lib-flexible/0.3.2/flexible.js'
@@ -71,6 +71,11 @@ module.exports = {
 		baseURL: 'http://vueh5.xueshanshan.top',
 		credentials: false,
 		proxyHeaders: false
+	},
+	postcss: function() {
+		return [px2rem({
+			remUnit: 75
+		})];
 	},
 	modules: ['@nuxtjs/pwa', '@nuxtjs/axios'],
 	plugins: ['~/plugins/filters.js']

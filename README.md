@@ -74,3 +74,11 @@ npm i -g pm2
 >记得修改 pm2.json 中的pwd属性为当前项目地址
 >
 >pm2具体使用方法自行百度
+
+
+```bash
+# --save
+cnpm i @nuxtjs/axios @nuxtjs/pwa axios nuxt bluebird busboy co debug ejs koa koa-bodyparser koa-logger koa-router koa-send koa-session koa-static koa-views koa2-cors mongoose validator xss --save
+# --save-dev
+cnpm i babel-eslint babel-preset-latest-node babel-preset-stage-3 backpack-core eslint eslint-friendly-formatter eslint-loader eslint-plugin-vue node-sass less less-loader node-sass nodemon postcss postcss-px2rem sass-loader -D
+```
