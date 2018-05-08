@@ -12,7 +12,6 @@ const mongoose = require('mongoose');
 const koaCors = require('koa2-cors');
 
 const app = new Koa()
-
 //配置cors 跨域
 app.use(koaCors())
 /**
@@ -45,7 +44,7 @@ app.use(bodyParser())
 
 // 配置静态资源加载中间件
 app.use(koaStatic(
-    path.join(__dirname, './../client')
+    path.join(__dirname, './../client/dist')
 ))
 
 // 配置服务端模板渲染引擎中间件

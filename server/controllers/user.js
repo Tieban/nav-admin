@@ -48,7 +48,7 @@ module.exports = {
             ctx.body = result
             return
         }
-        console.log('user == ', user)
+        // console.log('user == ', user)
         try {
             //写入数据库
             user = await user.save()
@@ -76,8 +76,8 @@ module.exports = {
     async login(ctx, next) {
         let username = ctx.request.body.username.trim()
         let password = ctx.request.body.password
-        console.log('username ==> ', username)
-        console.log('password ==> ', password)
+        // console.log('username ==> ', username)
+        // console.log('password ==> ', password)
         //根据用户名查询
         let user = await User.findOne({
             username,
@@ -85,7 +85,7 @@ module.exports = {
         })
         //      let user =  userServices.findByUserNameAndPassword({username,password})
 
-        console.log('user---login--->', user)
+        // console.log('user---login--->', user)
 
         let result = {
             success: false,
@@ -133,7 +133,7 @@ module.exports = {
             ctx.body = result
             return
         }
-        console.log('userId---getPower--->', userId)
+        // console.log('userId---getPower--->', userId)
 
         //根据用户Id查询
         let user = await User.findOne({
@@ -141,7 +141,7 @@ module.exports = {
         }).exec()
         //      let user =  userServices.findByUserNameAndPassword({username,password})
 
-        console.log('user---getPower--->', user)
+        // console.log('user---getPower--->', user)
 
         //判断用户是否存在
         if (!user) {

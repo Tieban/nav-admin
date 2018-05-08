@@ -6,7 +6,7 @@ const ObjectId = Schema.ObjectId;
 
 const CategorySchema = new Schema({
     userId: String,
-    isPublic: String, //1=公有，2=私有
+    isPublic: String, //1=公有，0=私有
     name: String,
     createAt: {
         type: Date,
