@@ -5,7 +5,7 @@
   "author": "xuess<wuniu2010@126.com>",
   "private": true,
   "scripts": {
-    "dev": "HOST=0.0.0.0 PORT=3333 nuxt",
+    "dev": "nodemon -w ./server -w ./start.js --exec node start.js",
     "build": "nuxt build && backpack build",
     "start": "cross-env NODE_ENV=production node build/main.js",
     "generate": "nuxt generate",
