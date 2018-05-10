@@ -79,7 +79,7 @@ export default {
         },
         callBack({ success, errCode, errMsg }) {
             if (success) {
-                this.$router.push('/main')
+                this.$router.push('/')
             } else {
                 this.$refs.toast.openToast(errMsg)
             }

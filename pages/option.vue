@@ -54,7 +54,7 @@
                 <span @click="addListItem">新增</span>
             </div>
         </section>
-        <nuxt-link :to="{path: '/main'}" class="set">退出编辑</nuxt-link>
+        <nuxt-link :to="{path: '/'}" class="set">退出编辑</nuxt-link>
     		<toast ref="toast"/>
     </div>
 </template>

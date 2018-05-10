@@ -7,14 +7,10 @@ module.exports = {
 		meta: [{
 				charset: 'utf-8'
 			},
-//			{
-//				name: 'viewport',
-//				content: 'width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'
-//			},
-			//{ hid: 'description', name: 'description', content: 'Nuxt.js project' }
+			{ hid: 'description', name: 'description', content: 'Nuxt.js koa mongodb 导航系统' }
 		],
 //		script: [{
-//				src: 'https://g.alicdn.com/mtb/??lib-flexible/0.3.2/flexible_css.js,lib-flexible/0.3.2/flexible.js'
+//				src: ''
 //			},
 //		],
 		link: [{
