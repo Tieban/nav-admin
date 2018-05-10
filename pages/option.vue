@@ -23,7 +23,7 @@
                 </li>
             </ul>
             <div v-else class="main__navNull">
-                <img src="../assets/imgs/404.png">
+                <img src="../assets/imgs/empty.png">
                 <p>{{tipTxt}}</p>
             </div>
             <div class="main__navAdd" v-if="showAdd">
@@ -45,7 +45,7 @@
                 </li>
             </ul>
             <div v-else class="main__navlistNull">
-                <img src="../assets/imgs/404.png">
+                <img src="../assets/imgs/empty.png">
                 <p>{{tipTxt}}</p>
             </div>
             <div class="main__navListAdd" v-if="showAdd">

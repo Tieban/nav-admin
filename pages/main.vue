@@ -11,7 +11,7 @@
                 </li>
             </ul>
             <div v-else>
-                <img src="../assets/imgs/404.png">
+                <img src="../assets/imgs/empty.png">
                 <p>没有内容呢，快去添加吧~</p>
                 <span @click="toOption" v-if="!isPublic">去添加</span>
             </div>
@@ -31,7 +31,7 @@
                 </li>
             </ul>
             <div v-else>
-                <img src="../assets/imgs/404.png">
+                <img src="../assets/imgs/empty.png">
                 <p>没有内容呢，快去添加吧~</p>
                 <span @click="toOption" v-if="!isPublic">去添加</span>
             </div>
