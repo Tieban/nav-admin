@@ -36,7 +36,9 @@
                 <span @click="toOption" v-if="!isPublic">去添加</span>
             </div>
         </section>
-        <router-link :to="{path: '/option'}" class="set">设置</router-link>
+        <nuxt-link :to="{path: '/option'}" class="set">设置</nuxt-link>
+    		
+    		<toast ref="toast"/>
     </div>
 </template>
 <script>
@@ -96,7 +98,7 @@ export default {
             if (errCode == -1) {
                 this.$router.push('/')
             } else {
-                alert(errMsg)
+                this.$refs.toast.openToast(errMsg)
             }
         },
         toOption() {

@@ -54,7 +54,8 @@
                 <span @click="addListItem">新增</span>
             </div>
         </section>
-        <router-link :to="{path: '/main'}" class="set">退出编辑</router-link>
+        <nuxt-link :to="{path: '/main'}" class="set">退出编辑</nuxt-link>
+    		<toast ref="toast"/>
     </div>
 </template>
 <script>
@@ -166,7 +167,7 @@ export default {
             } else {
                 editCateItem(item).then(({ success, data, errCode, errMsg }) => {
                     if (success) {
-                        alert('更新成功')
+                        this.$refs.toast.openToast('更新成功')
                         this.cateEditing = false
                         this.selCateId = data._id
                     } else {
@@ -224,7 +225,7 @@ export default {
         editList(item, index) {
             editUrl(item).then(({ success, errCode, errMsg }) => {
                 if (success) {
-                    alert('更新成功')
+                    this.$refs.toast.openToast('更新成功')
                     this.selUrlIndex = -1
                 } else {
                     this.failFn(errCode, errMsg)
@@ -255,7 +256,7 @@ export default {
             if (errCode == -1) {
                 this.$router.push('/')
             } else {
-                alert(errMsg)
+                this.$refs.toast.openToast(errMsg)
             }
         }
     }

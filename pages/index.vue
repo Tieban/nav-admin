@@ -18,6 +18,8 @@
           target="_blank"
           class="button--grey">GitHub</a>
       </div>
+      
+      <toast ref="toast"/>
     </div>
   </section>
 </template>
@@ -26,9 +28,14 @@
 import AppLogo from '~/components/AppLogo.vue'
 
 export default {
+//	middleware: 'auth',
   components: {
     AppLogo
-  }
+  },
+  mounted() {
+  		this.$refs.toast.openToast('删除完成!!!')
+  },
+  
 }
 </script>
 

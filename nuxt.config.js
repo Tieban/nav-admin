@@ -16,7 +16,6 @@ module.exports = {
 //		script: [{
 //				src: 'https://g.alicdn.com/mtb/??lib-flexible/0.3.2/flexible_css.js,lib-flexible/0.3.2/flexible.js'
 //			},
-//			
 //		],
 		link: [{
 			rel: 'icon',
@@ -61,5 +60,5 @@ module.exports = {
 		})];
 	},
 	modules: ['@nuxtjs/pwa', '@nuxtjs/axios'],
-	plugins: ['~/plugins/filters.js']
+	plugins: ['~/plugins/components.js', '~/plugins/filters.js']
 }

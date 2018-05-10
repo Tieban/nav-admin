@@ -16,7 +16,9 @@
             </div>
         </section>
         <a href="mailto:wuniu2010@126.com" class="login__mail">问题联系邮箱：wuniu2010@126.com</a>
+	    <toast ref="toast"/>
     </div>
+    
 </template>
 <script>
 /* global alert */
@@ -67,10 +69,10 @@ export default {
         regName(fn) {
             let nameReg = /^[a-zA-Z]+$/
             if (!nameReg.test(this.username)) {
-                alert('请填写正确的姓名全拼')
+                this.$refs.toast.openToast('请填写正确的姓名全拼')
                 return false
             } else if (this.password.length < 6) {
-                alert('密码不少于6位')
+                this.$refs.toast.openToast('密码不少于6位')
                 return false
             }
             fn && fn()
@@ -79,7 +81,7 @@ export default {
             if (success) {
                 this.$router.push('/main')
             } else {
-                alert(errMsg)
+                this.$refs.toast.openToast(errMsg)
             }
         }
     }
