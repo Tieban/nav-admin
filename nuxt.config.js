@@ -19,7 +19,7 @@ module.exports = {
 			href: '/favicon.ico'
 		}]
 	},
-	css: [],
+	css: ['iview/dist/styles/iview.css'],
 	/*
 	 ** Customize the progress bar color
 	 */
