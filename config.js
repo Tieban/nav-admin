@@ -4,7 +4,7 @@ const config = {
 		url: 'mongodb://127.0.0.1:27017/aym_nav'
 	},
 	app: {
-		host: '127.0.0.1',
+		host: '0.0.0.0',
 		port: 2018,
 		routerBaseApi: 'api'
 	}
