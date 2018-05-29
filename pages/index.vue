@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <section class="main__nav">
+        <section class="main__nav" style="height:100vh;">
             <p>
                 <span :class="{'selected': isPublic}" @click="selectPublicOrPrivate(1)">公有</span>
                 <span :class="{'selected': !isPublic}" @click="selectPublicOrPrivate(0)">私有</span>
@@ -10,7 +10,7 @@
                     <p>{{item.name}}</p>
                 </li>
             </ul>
-            <div v-else>
+            <div v-else >
                 <img src="../assets/imgs/empty.png">
                 <p>没有内容呢，快去添加吧~</p>
                 <span @click="toOption" v-if="!isPublic">去添加</span>
