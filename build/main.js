@@ -661,7 +661,7 @@ module.exports = require("koa-session");
 const config = {
 	port: 2018,
 	mongodb: {
-		url: 'mongodb://127.0.0.1:27017/aym_nav'
+		url: 'mongodb://127.0.0.1:27017/admin_nav'
 	},
 	app: {
 		host: '127.0.0.1',
